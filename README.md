@@ -58,19 +58,19 @@ We welcome contributions to the Admissions project! To contribute:
     Create a new branch for your contribution. Use a descriptive name that reflects the nature of your work.
    git checkout -b feature/new-feature
 
-5. **Make Changes:**
+4. **Make Changes:**
 
     Make your desired changes, improvements, or bug fixes to the codebase.
    
-7. **Commit and Push:**
+5. **Commit and Push:**
 
     git commit -m "Add your commit message here"
-   git push origin feature/new-feature
+    git push origin feature/new-feature
 
-6.**Create a Pull Request:**
+6. **Create a Pull Request:**
    
    Open a pull request on the dev branch of the main repository. Provide a clear description of your changes and their purpose.
    
-7.**Review and Merge:**
+7. **Review and Merge:**
    
    Your pull request will be reviewed. Once approved, your changes will be merged into the main repository.
