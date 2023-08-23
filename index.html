@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMISSION FORM</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="date-display">
+            <span class="badge bg-primary">
+                <i class="far fa-calendar-alt me-1"></i>
+                <span id="currentDateTime"></span>
+            </span>
+        </div>
+        <form action="insert.php" method="post">
+            
+            <h3>Undergraduste programme</h3>
+            <input type="radio"  name="programme" value="Degree"> Degree <br>
+            <input type="radio" name="programme" value="Diploma"> Diploma
+            <fieldset>
+                <legend>A. Biodata(Applicant Details)</legend>
+                <table>
+                    <h3 class="text">Applicant's name must correspond to those used for all examinations taken </h3>
+                    <tr>
+                        <td><label for="title" class="label" >Title (Mr/Mrs/Ms)</label></td>
+                        <td><select name="title" class="form-select" id="selected-title">
+                            <option value="">Select your title</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Ms.">Ms.</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Name"class="label">Name:</label></td>
+                        <td><input type="text" class="input-field" name="surname" id="surname" placeholder="surname" ></td>
+                        <td><input type="text" class="input-field" name="firstname" id="firstname" placeholder="Firstname" ></td>
+                        <td><input type="text" class="input-field" name="middlename" id="middlename" placeholder="Middle Name" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email"class="label">Email:</label></td>
+                        <td><input type="email" class="input-field" name="email" id="email" placeholder="Enter email" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for=""class="label">Date of Birth:</label></td>
+                        <td > <input type="date" class="form-control" name="dateofbirth"></td>
+                    </tr>
+                    <tr>
+                        <td><label for=""class="label">Place of Birth:</label></td>
+                       <td><input type="text" class="input-field" name="placeofbirth" placeholder="Enter the place of birth"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <table>
+                    <tr>
+                        <td><label for="username"class="label">Username:</label></td>
+                        <td><input type="text" class="input-field" name="username" id="user-name" placeholder="Enter Username" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password"class="label">Password:</label></td>
+                        <td><input type="password" class="input-field" name="password" id="password" placeholder="" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="secret-code"class="label"> Secret Code:</label></td>
+                        <td><input type="text" class="input-field" name="secretcode" id="secret-code" value="CUCG-001" readonly="readonly"></td>
+                    </tr>
+                </table>
+            </fieldset><br>
+            <div>
+                <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" name ="clear" id="clear" class="btn btn-secondary" value="Clear">
+                <input type="button" name="cancel" id="cancel" class="btn btn-danger" value="Cancel">
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/clock.js"></script>
+    <script>
+        let cancelbutton = getElementById("cancel")
+        clearbutton.addEventListener("change", function () {
+        var result = confirm("Are you sure you want to log out?");
+        if (result) {
+            window.location.href = "logon.php"; // Redirect to logout page
+        } else {
+            history.back(); // Go back to the previous page
+        }
+    });
+    </script>
+</body>
+</html>
